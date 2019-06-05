@@ -12,14 +12,17 @@ router.get('/',function(req,res){
 router.post('/',function(req,res){
 const newEvent = new eventModel({
     _id:new mongoose.Types.ObjectId(),
-    leader:req.body.leader,
-    trek_start:req.body.trek_start,
-    trek_end:req.body.trek_end,
-    meeting_date:req.body.meeting_date,
-    meeting_address:req.body.meeting_address,
-    meeting_time:req.body.meeting_time,
-    joinerscount:req.body.joinerscount,
-    price:req.body.price
+    leader : req.body.leader,
+    trek_start : req.body.trek_start,
+    trek_end : req.body.trek_end,
+    meeting_date : req.body.meeting_date,
+    meeting_address : req.body.meeting_address,
+    meeting_time : req.body.meeting_time,
+    email:req.body.email,
+    password:req.body.password,
+    //eventImage:req.body.eventImage,
+    joinerscount : req.body.joinerscount,
+    price : req.body.price
 });
 newEvent.save(function(err,newEntry){
     if(err){

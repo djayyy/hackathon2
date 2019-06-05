@@ -8,10 +8,12 @@ const eventSchema = mongoose.Schema({
     },
     trek_start:{type:String,required:true},
     trek_end:{type:String,required:true},
-    meeting_date:{type:String,required:true},
     meeting_address:{type:String,required:true},
+    meeting_date:{type:String,required:true},
     meeting_time:{type:String,required:true},
-    
+    email:{type:String,required:true,unique:true},
+    password:{type:String,required:true},
+    //eventImage:{type:String,required:true},
     joinerscount:{type:Number,required:true,default:0},
     price:{type:Number,required:true}
 });
